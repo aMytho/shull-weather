@@ -32,6 +32,23 @@
 $ npm install
 ```
 
+## Database Connection
+
+Create `ormconfig.json` in the root directory. Enter the below data to connect to the server. Make sure to replace your credentials with the ones shown.
+
+```json
+{
+    "type": "mysql",
+    "host": "IP Address",
+    "port": 3306,
+    "username": "username",
+    "password": "password",
+    "database": "SkyWeather",
+    "entities": ["dist/weather/entity/weather.entity.js"],
+    "synchronize": false
+}
+```
+
 ## Running the app
 
 ```bash
