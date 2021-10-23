@@ -1,0 +1,25 @@
+| Field                       | Type         | Null | Key | Default           | Extra          |
++-----------------------------+--------------+------+-----+-------------------+----------------+
+| ID                          | int(20)      | NO   | PRI | NULL              | auto_increment |
+| TimeStamp                   | timestamp    | NO   |     | CURRENT_TIMESTAMP |                |
+| as3935LightningCount        | float        | NO   |     | NULL              |                |
+| as3935LastInterrupt         | float        | NO   |     | NULL              |                |
+| as3935LastDistance          | float        | NO   |     | NULL              |                |
+| as3935LastStatus            | varchar(200) | NO   |     | NULL              |                |
+| currentWindSpeed            | float        | NO   |     | NULL              |                |
+| currentWindGust             | float        | NO   |     | NULL              |                |
+| currentWindDirection        | float        | NO   |     | NULL              |                |
+| currentWindDirectionVoltage | float        | NO   |     | NULL              |                |
+| totalRain                   | float        | NO   |     | NULL              |                |
+| bmp180Temperature           | int(20)      | NO   |     | NULL              |                |
+| bmp180Pressure              | float        | NO   |     | NULL              |                |
+| bmp180Altitude              | float        | NO   |     | NULL              |                |
+| bmp180SeaLevel              | float        | NO   |     | NULL              |                |
+| outsideTemperature          | float        | NO   |     | NULL              |                |
+| outsideHumidity             | float        | NO   |     | NULL              |                |
+| insideTemperature           | float        | NO   |     | NULL              |                |
+| insideHumidity              | float        | NO   |     | NULL              |                |
+| AQI                         | float        | NO   |     | NULL              |                |
++-----------------------------+--------------+------+-----+-------------------+----------------+
+20 rows in set (0.00 sec)
+
