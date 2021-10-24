@@ -1,10 +1,18 @@
 import { Controller, Get, Redirect, Render } from '@nestjs/common';
+import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
-    constructor() { }
+    constructor(
+        private readonly appService: AppService
+    ) { }
 
     @Get()
     @Redirect("/weather")
     redirecting() {}
+
+    @Get("system")
+    systemReport() {
+        return this.appService.getStats();
+    }
 }

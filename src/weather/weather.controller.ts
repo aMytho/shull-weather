@@ -11,13 +11,7 @@ export class WeatherController {
         return data;
     }
 
-    @Get("render")
-    @Render("index")
-    getRender() {
-        return { message: "example" }
-    }
-
-    @Get("recent")
+    @Get("api/recent")
     async getRecent() {
         return await this.weatherService.findRecent();
     }
@@ -25,6 +19,12 @@ export class WeatherController {
     @Get("table")
     @Render("table")
     async renderTable() {
-        return {weather: await this.weatherService.findRecent()}
+        return {weather: await this.weatherService.findRecent()};
+    }
+
+    @Get("home")
+    @Render("index")
+    async loadHomePage() {
+        return {weather: await this.weatherService.findRecent()};
     }
 }
