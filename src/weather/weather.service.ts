@@ -23,7 +23,8 @@ export class WeatherService {
     }
 
     async remove(id: string): Promise<void> {
-        await this.weatherRepository.delete(id);
+        //await this.weatherRepository.delete(id);
+        console.log("Attempted to delete a row, but you commented out the line to do so.");
     }
 
     getMockWeather() {

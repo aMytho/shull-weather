@@ -21,4 +21,10 @@ export class WeatherController {
     async getRecent() {
         return await this.weatherService.findRecent();
     }
+
+    @Get("table")
+    @Render("table")
+    async renderTable() {
+        return {weather: await this.weatherService.findRecent()}
+    }
 }
