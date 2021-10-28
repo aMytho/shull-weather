@@ -27,4 +27,10 @@ export class WeatherController {
     async loadHomePage() {
         return {weather: await this.weatherService.findRecent()};
     }
+
+    @Get("mock")
+    create() {
+        this.weatherService.generateMockWeather();
+        return "Data generated, head to /weather/table to view the updated set"
+    }
 }

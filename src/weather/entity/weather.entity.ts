@@ -60,5 +60,5 @@ export class Weather {
     insideHumidity: number;
 
     @Column()
-    AQI: number;    
+    AQI: number;
 }
