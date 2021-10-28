@@ -1,0 +1,10 @@
+{
+    "type": "mysql",
+    "host": "localhost",
+    "port": 3307,
+    "username": "myuser",
+    "password": "mypass",
+    "database": "SkyWeather",
+    "entities": ["dist/weather/entity/weather.entity.js"],
+    "synchronize": false
+}
