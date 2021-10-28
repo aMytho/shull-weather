@@ -1,0 +1,10 @@
+tasks:
+  - init: |
+      docker-compose pull
+  - command: |
+      docker-compose up
+ports:
+  - port: 3306
+    onOpen: ignore
+  - port: 3307
+    onOpen: ignore
