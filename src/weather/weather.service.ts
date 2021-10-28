@@ -32,6 +32,7 @@ export class WeatherService {
     }
 
     generateMockWeather() {
+        console.log("Generating fake weather data")
         this.weatherRepository.insert({
             AQI: 100,
             //TimeStamp: "2021-12",
