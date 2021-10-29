@@ -1,0 +1,16 @@
+body {
+    background: url(/img/snapshot.jpg);
+    background-repeat: no-repeat;
+}
+
+table {
+    background-color: cornsilk;
+}
+
+li {
+    font-weight: 700;
+}
+
+td {
+    font-weight: 700;
+}

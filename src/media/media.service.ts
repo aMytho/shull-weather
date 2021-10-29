@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { MediaStorage } from './entity/media.entity';
+import {readdir} from "fs/promises"
 
 @Injectable()
 export class MediaService {
@@ -12,7 +13,11 @@ export class MediaService {
         return this.images[image];
     }
 
-    getAllImages() {
-        return this.images
+    async getAllImages() {
+        let files = [];
+        let media = await readdir("");
+        media.forEach(file => files.push(file));
+        console.log(files);
+        return files;
     }
 }

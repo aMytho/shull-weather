@@ -4,7 +4,10 @@
 <head>
   <meta charset="utf-8" />
   <title>Shull Weather</title>
+  <link rel="stylesheet" href="/css/custom.css">
   <link rel="stylesheet" href="/css/bootstrap.css">
+  <script src="/js/jquery.js"></script>
+  <script src="/js/bootstrap.js"></script>
 </head>
 
 <body>
@@ -19,7 +22,7 @@
   </style>
   <div class="container" style="overflow: auto;">
     <div class="row">
-      <div class="col-6">
+      <div class="col-12">
         <table class="table table-striped table-bordered table-sm table-responsive">
           <tr>
             <th scope="col">ID</th>
@@ -33,8 +36,6 @@
             <th scope="col">totalRain</th>
             <th scope="col">bmp180Temperature</th>
             <th scope="col">bmp180Pressure</th>
-            <th scope="col">bmp180Altitude</th>
-            <th scope="col">bmp180SeaLevel</th>
             <th scope="col">outsideTemperature</th>
             <th scope="col">outsideHumidity</th>
             <th scope="col">insideTemperature</th>
@@ -54,8 +55,6 @@
             <td>{{this.totalRain}}</td>
             <td>{{this.bmp180Temperature}}</td>
             <td>{{this.bmp180Pressure}}</td>
-            <td>{{this.bmp180Altitude}}</td>
-            <td>{{this.bmp180SeaLevel}}</td>
             <td>{{this.outsideTemperature}}</td>
             <td>{{this.outsideHumidity}}%</td>
             <td>{{this.insideTemperature}}</td>
@@ -64,6 +63,29 @@
           </tr>
           {{/each}}
         </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <ul>
+          <li>Temperature: 77F</li>
+          <li>Humidity: 34%</li>
+          <li>AQI: 67</li>
+        </ul>
+      </div>
+      <div class="col-sm">
+        <ul>
+          <li>Wind Speed: 5mph</li>
+          <li>Wind Gust: 7mph</li>
+          <li>Wind Direction: N</li>
+        </ul>
+      </div>
+      <div class="col-sm">
+        <ul>
+          <li>Total Rain: 5in</li>
+          <li>Lightning Count: 4</li>
+          <li>Lightning Distance: 23m</li>
+        </ul>
       </div>
     </div>
     <div class="row">
@@ -76,13 +98,13 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="..." alt="First slide">
+              <img class="d-block w-100" src="https://raw.githubusercontent.com/switchdoclabs/SDL_Pi_SkyWeather/master/static/TemperatureHumidityGraph.png" alt="First slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="..." alt="Second slide">
+              <img class="d-block w-100" src="https://raw.githubusercontent.com/switchdoclabs/SDL_Pi_SkyWeather/master/static/BarometerLightningGraph.png" alt="Second slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="..." alt="Third slide">
+              <img class="d-block w-100" src="https://raw.githubusercontent.com/switchdoclabs/SDL_Pi_SkyWeather/master/static/PowerCurrentGraph.png" alt="Third slide">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -97,6 +119,28 @@
       </div>
     </div>
   </div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col">
+      1 of 2
+    </div>
+    <div class="col">
+      2 of 2
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      1 of 3
+    </div>
+    <div class="col">
+      2 of 3
+    </div>
+    <div class="col">
+      3 of 3
+    </div>
+  </div>
+</div>
 
 </body>
 
