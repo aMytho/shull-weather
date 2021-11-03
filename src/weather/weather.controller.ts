@@ -28,6 +28,12 @@ export class WeatherController {
         return {weather: await this.weatherService.findRecent()};
     }
 
+    @Get("graphs")
+    @Render("graphs")
+    renderGraphs() {
+        return {}
+    }
+
     @Get("mock")
     create() {
         this.weatherService.generateMockWeather();
