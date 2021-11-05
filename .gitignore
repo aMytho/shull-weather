@@ -36,3 +36,6 @@ lerna-debug.log*
 
 # MySQL database config
 ormconfig.json
+
+# General config
+.env

@@ -1,9 +1,13 @@
 import { Controller, Get, Render } from '@nestjs/common';
+import { OpenWeatherService } from 'src/open-weather/open-weather.service';
 import { WeatherService } from './weather.service';
 
 @Controller("weather")
 export class WeatherController {
-    constructor(private readonly weatherService: WeatherService) { }
+    constructor(
+        private readonly weatherService: WeatherService,
+        private weatherApi: OpenWeatherService
+        ) { }
 
     @Get()
     async tryQuery() {
@@ -38,5 +42,11 @@ export class WeatherController {
     create() {
         this.weatherService.generateMockWeather();
         return "Data generated, head to /weather/table to view the updated set"
+    }
+
+    @Get("api")
+    async getAPI() {
+        let data = await this.weatherApi.getCurrentWeather();
+        return data
     }
 }
