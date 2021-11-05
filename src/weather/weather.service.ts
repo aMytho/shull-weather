@@ -18,8 +18,12 @@ export class WeatherService {
         return this.weatherRepository.findOne(id);
     }
 
+    /**
+     * Returns the last 12 entries (1 hour of weather data)
+     * @returns 
+     */
     findRecent() {
-        return this.weatherRepository.query(`SELECT * FROM WeatherData ORDER BY id DESC LIMIT 10`)
+        return this.weatherRepository.query(`SELECT * FROM WeatherData ORDER BY id DESC LIMIT 12`)
     }
 
     async remove(id: string): Promise<void> {
