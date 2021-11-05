@@ -49,6 +49,15 @@ Create `ormconfig.json` in the root directory. Enter the below data to connect t
 }
 ```
 
+## Config Options
+
+Create `.env` in the root directory. Enter the below data replacing the values with your own key and zip code.
+
+```env
+openWeatherKey = OPEN_WEATHER_KEY_HERE
+zipCode = 00601
+```
+
 ## Running the app
 
 ```bash
