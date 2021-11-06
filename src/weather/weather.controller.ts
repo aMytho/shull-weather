@@ -10,14 +10,9 @@ export class WeatherController {
         ) { }
 
     @Get()
-    async tryQuery() {
-        const data = await this.weatherService.findAll();
-        return data;
-    }
-
-    @Get("api/recent")
-    async getRecent() {
-        return await this.weatherService.findRecent();
+    @Render("index")
+    async loadHomePage() {
+        return {weather: await this.weatherService.findRecent()};
     }
 
     @Get("table")
@@ -26,16 +21,10 @@ export class WeatherController {
         return {weather: await this.weatherService.findRecent()};
     }
 
-    @Get("home")
-    @Render("index")
-    async loadHomePage() {
-        return {weather: await this.weatherService.findRecent()};
-    }
-
-    @Get("graphs")
-    @Render("graphs")
-    renderGraphs() {
-        return {}
+    @Get("all")
+    async getAll() {
+        let data = await this.weatherService.findAll();
+        return data
     }
 
     @Get("mock")
@@ -44,9 +33,15 @@ export class WeatherController {
         return "Data generated, head to /weather/table to view the updated set"
     }
 
-    @Get("api")
+    @Get("global")
     async getAPI() {
         let data = await this.weatherApi.getCurrentWeather();
+        return data
+    }
+
+    @Get("global/aqi")
+    async getAQL() {
+        let data = await this.weatherApi.getAQI();
         return data
     }
 }
