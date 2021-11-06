@@ -28,7 +28,7 @@ export class MediaController {
 
     @Get()
     getImage() {
-        return this.mediaService.getImage("");
+        return "No images"
     }
 
     @Get("all")
