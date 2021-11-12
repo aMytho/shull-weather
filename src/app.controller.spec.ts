@@ -14,9 +14,9 @@ describe('AppController', () => {
     appController = app.get<AppController>(AppController);
   });
 
-  describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
+  describe('/system', () => {
+    it('should return system status', () => {
+      expect(appController.systemReport()).toMatch(/Shull-Weather is using approximately/);
     });
   });
 });
