@@ -14,3 +14,50 @@ li {
 td {
     font-weight: 700;
 }
+
+.hugeTemp {
+    font-size: 15rem;
+    font-weight: bold;
+}
+
+svg {
+    margin: 5%;
+    background-color: pink;
+    border-radius: 20px;
+    border: 2px solid red;
+}
+#card {
+    fill: white;
+    border-radius: 20px;
+    stroke: black;
+    stroke-width: 2;
+}
+#back {
+    fill: #1d2731;
+}
+#north-left, #south-left, #east-left, #west-left {
+    fill: #af473c;
+}
+#north-right, #south-right, #east-right, #west-right {
+    fill: #d9b310;
+}
+#outer {
+    stroke: #4cdef5;
+    stroke-width: 10;
+    fill: none;
+}
+#inner {
+    fill: #328cc1;
+}
+#text {
+    font-family: Impact;
+    font-size: 40px;
+    font-style: normal;
+    font-variant: caps;
+    font-weight: 700;
+}
+
+#compass {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}

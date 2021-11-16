@@ -22,50 +22,6 @@
   </style>
   <div class="container" style="overflow: auto;">
     <div class="row">
-      <div class="col-12">
-        <table class="table table-striped table-bordered table-sm table-responsive">
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">as3935LightningCount</th>
-            <th scope="col">as3935LastInterrupt</th>
-            <th scope="col">as3935LastDistance</th>
-            <th scope="col">currentWindSpeed</th>
-            <th scope="col">currentWindGust</th>
-            <th scope="col">currentWindDirection</th>
-            <th scope="col">currentWindDirectionVoltage</th>
-            <th scope="col">totalRain</th>
-            <th scope="col">bmp180Temperature</th>
-            <th scope="col">bmp180Pressure</th>
-            <th scope="col">outsideTemperature</th>
-            <th scope="col">outsideHumidity</th>
-            <th scope="col">insideTemperature</th>
-            <th scope="col">insideHumidity</th>
-            <th scope="col">AQI</th>
-          </tr>
-          {{#each weather}}
-          <tr>
-            <td>{{this.ID}}</td>
-            <td>{{this.as3935LightningCount}}</td>
-            <td>{{this.as3935LastInterrupt}}</td>
-            <td>{{this.as3935LastDistance}}</td>
-            <td>{{this.currentWindSpeed}}</td>
-            <td>{{this.currentWindGust}}</td>
-            <td>{{this.currentWindDirection}}</td>
-            <td>{{this.currentWindDirectionVoltage}}</td>
-            <td>{{this.totalRain}}</td>
-            <td>{{this.bmp180Temperature}}</td>
-            <td>{{this.bmp180Pressure}}</td>
-            <td>{{this.outsideTemperature}}</td>
-            <td>{{this.outsideHumidity}}%</td>
-            <td>{{this.insideTemperature}}</td>
-            <td>{{this.insideHumidity}}%</td>
-            <td>{{this.AQI}}</td>
-          </tr>
-          {{/each}}
-        </table>
-      </div>
-    </div>
-    <div class="row">
       <div class="col-sm">
         <ul>
           <li>Temperature: 77F</li>
@@ -86,6 +42,46 @@
           <li>Lightning Count: 4</li>
           <li>Lightning Distance: 23m</li>
         </ul>
+      </div>
+    </div>
+     <div class="row">
+      <div class="col-12">
+        <table class="table table-striped table-bordered table-sm table-responsive">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">as3935LightningCount</th>
+            <th scope="col">as3935LastInterrupt</th>
+            <th scope="col">as3935LastDistance</th>
+            <th scope="col">currentWindSpeed</th>
+            <th scope="col">currentWindGust</th>
+            <th scope="col">currentWindDirection</th>
+            <th scope="col">currentWindDirectionVoltage</th>
+            <th scope="col">totalRain</th>
+            <th scope="col">bmp180Temperature</th>
+            <th scope="col">bmp180Pressure</th>
+            <th scope="col">outsideTemperature</th>
+            <th scope="col">outsideHumidity</th>
+            <th scope="col">AQI</th>
+          </tr>
+          {{#each weather}}
+          <tr>
+            <td>{{this.ID}}</td>
+            <td>{{this.as3935LightningCount}}</td>
+            <td>{{this.as3935LastInterrupt}}</td>
+            <td>{{this.as3935LastDistance}}</td>
+            <td>{{this.currentWindSpeed}}</td>
+            <td>{{this.currentWindGust}}</td>
+            <td>{{this.currentWindDirection}}</td>
+            <td>{{this.currentWindDirectionVoltage}}</td>
+            <td>{{this.totalRain}}</td>
+            <td>{{this.bmp180Temperature}}</td>
+            <td>{{this.bmp180Pressure}}</td>
+            <td>{{this.outsideTemperature}}</td>
+            <td>{{this.outsideHumidity}}%</td>
+            <td>{{this.AQI}}</td>
+          </tr>
+          {{/each}}
+        </table>
       </div>
     </div>
     <div class="row">
