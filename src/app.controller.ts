@@ -8,7 +8,7 @@ export class AppController {
     ) { }
 
     @Get()
-    @Redirect("/weather/home")
+    @Redirect("/weather")
     redirecting() {}
 
     @Get("system")
