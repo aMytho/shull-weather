@@ -26,12 +26,18 @@ export class Weather {
     @Column()
     currentWindGust: number;
 
+    /**
+     * Wing angle (0-360)
+     */
     @Column()
     currentWindDirection: number;
 
     @Column()
     currentWindDirectionVoltage: number;
 
+    /**
+     * Total rain in inches
+     */
     @Column()
     totalRain: number;
 
@@ -50,15 +56,27 @@ export class Weather {
     @Column()
     outsideTemperature: number;
 
+    /**
+     * Outside Humidity
+     */
     @Column()
     outsideHumidity: number;
 
+    /**
+     * Temp inside the weather unit (ignore)
+     */
     @Column()
     insideTemperature: number;
 
+    /**
+     * Humidity inside the weather unit (ignore)
+     */
     @Column()
     insideHumidity: number;
 
+    /**
+     * Air Quality Index
+     */
     @Column()
     AQI: number;
 }
