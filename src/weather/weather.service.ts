@@ -22,8 +22,17 @@ export class WeatherService {
      * Returns the last 12 entries (1 hour of weather data)
      * @returns 
      */
-    findRecent() {
+    findRecent(): Promise<Weather[]> {
         return this.weatherRepository.query(`SELECT * FROM WeatherData ORDER BY id DESC LIMIT 12`)
+    }
+
+    /**
+     * Returns the most recent weather data. (5 min)
+     * @returns 
+     */
+    async getCurrent(): Promise<Weather> {
+        let data = await this.weatherRepository.query(`SELECT * FROM WeatherData ORDER BY id DESC LIMIT 1`);
+        return data[0];
     }
 
     async remove(id: string): Promise<void> {

@@ -24,6 +24,6 @@ export class WeatherController {
     @Get("test")
     @Render("test")
     async getTestPage() {
-        return {}
+        return {weather: await this.weatherService.getCurrent()};
     }
 }
