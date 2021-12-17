@@ -60,6 +60,25 @@ openWeatherKey = OPEN_WEATHER_KEY_HERE
 zipCode = 00601
 ```
 
+## Database Setup
+
+Move into the docker container. 
+
+Example: `docker exec -it  shull-weather_db_1 bash`
+
+Connect to the databse.
+
+Example: `mysql -u root -h localhost -p SkyWeather` 
+Enter the password when prompted.
+
+Copy and paste all of the data in `SkyWeather.sql` into the sql prompt.
+
+Exit the sql prompt.
+Example: `exit`
+
+Exit the docker container
+Example: `exit`
+
 ## Running the app
 
 ```bash
@@ -72,6 +91,10 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+
+## Generate Fake Data
+
+WHile the server is running head to /weather/api/mock. This will generate one entry for each request.
 
 ## Test
 
