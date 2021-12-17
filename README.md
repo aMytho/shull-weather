@@ -49,6 +49,8 @@ Create `ormconfig.json` in the root directory. Enter the below data to connect t
 }
 ```
 
+If you are using gitpod the default username and password are both root. Copy all other fields from the example ormconfig file.
+
 ## Config Options
 
 Create `.env` in the root directory. Enter the below data replacing the values with your own key and zip code.
